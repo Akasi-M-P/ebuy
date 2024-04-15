@@ -5,12 +5,12 @@ import { products } from "/src/components/Data/Data";
 const Body = () => {
   return (
     <>
-      <div className="products_container">
+      <div className="products_container mt-4">
+        <hr />
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
       </div>
-      <hr className="w-full" />
     </>
   );
 };
