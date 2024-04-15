@@ -40,6 +40,20 @@ const NavBar = () => {
         </div>
       </div>
       <hr />
+      <div className="">
+        <div className="h-32 flex flex-col justify-center items-center gap-3 text-sm text-orange-500 font-bold">
+          <div>
+            <a href="">About</a>
+          </div>
+          <div className="w-full py-2">
+            <hr />
+          </div>
+          <div>
+            <a href="">Contact Us</a>
+          </div>
+        </div>
+        <hr />
+      </div>
     </>
   );
 };
