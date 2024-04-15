@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import { FaHeart } from "react-icons/fa6";
 import { RiShoppingCartFill } from "react-icons/ri";
-import { HiBars3 } from "react-icons/hi2";
+import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 const NavBar = () => {
   return (
@@ -36,7 +36,7 @@ const NavBar = () => {
         </div>
         <div className="md:hidden">
           <div>
-            <HiBars3 className=" text-orange-500 cursor-pointer text-xl" />
+            <FaBars className=" text-orange-500 cursor-pointer text-xl" />
             <IoMdClose className="hidden text-orange-500 cursor-pointer text-xl" />
           </div>
         </div>
