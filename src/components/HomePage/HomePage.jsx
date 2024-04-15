@@ -1,3 +1,4 @@
+import Hero from "../Hero/Hero";
 import NavBar from "../NavBar/NavBar";
 import "./HomePage.css";
 
@@ -6,6 +7,9 @@ const HomePage = () => {
     <>
       <div>
         <NavBar />
+      </div>
+      <div>
+        <Hero />
       </div>
     </>
   );
