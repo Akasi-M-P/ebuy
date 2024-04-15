@@ -20,11 +20,17 @@ const NavBar = () => {
           </div>
         </div>
         <div className="flex gap-10">
-          <div>
+          <div className="relative">
             <FaHeart className="text-orange-500 cursor-pointer text-xl" />
+            <div className="absolute -top-2 -right-3 bg-orange-500  rounded-full flex justify-center w-4 h-4">
+              <p className="text-sm text-white font-bold">5</p>
+            </div>
           </div>
-          <div>
+          <div className="relative">
             <RiShoppingCartFill className="text-orange-500 cursor-pointer text-xl" />
+            <div className="absolute -top-2 -right-3 bg-orange-500  rounded-full flex justify-center w-4 h-4">
+              <p className="text-sm text-white font-bold">8</p>
+            </div>
           </div>
         </div>
         <div>
