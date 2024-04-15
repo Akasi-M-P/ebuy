@@ -31,13 +31,13 @@ const Hero = () => {
           <img src="/assets/heroimage1.jpg" alt="hero_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/assets/heroimage1.jpg" alt="hero_image" />
+          <img src="/assets/heroimage2.jpg" alt="hero_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/assets/heroimage1.jpg" alt="hero_image" />
+          <img src="/assets/heroimage3.png" alt="hero_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/assets/heroimage1.jpg" alt="hero_image" />
+          <img src="/assets/heroimage4.jpg" alt="hero_image" />
         </SwiperSlide>
       </Swiper>
     </div>
