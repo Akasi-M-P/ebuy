@@ -28,16 +28,16 @@ const Hero = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="/src/assets/heroimage1.jpg" alt="" />
+          <img src="/src/assets/heroimage1.jpg" alt="hero_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/heroimage1.jpg" alt="" />
+          <img src="/src/assets/heroimage1.jpg" alt="hero_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/heroimage1.jpg" alt="" />
+          <img src="/src/assets/heroimage1.jpg" alt="hero_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/heroimage1.jpg" alt="" />
+          <img src="/src/assets/heroimage1.jpg" alt="hero_image" />
         </SwiperSlide>
       </Swiper>
     </div>
