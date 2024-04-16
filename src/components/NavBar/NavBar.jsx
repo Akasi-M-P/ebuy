@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({ OnOpenCart }) => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
 
   function handleMobileNav() {
@@ -35,7 +35,10 @@ const NavBar = () => {
             </div>
           </div>
           <div className="relative">
-            <RiShoppingCartFill className="text-orange-500 cursor-pointer text-xl md:text-2xl lg:text-4xl" />
+            <RiShoppingCartFill
+              className="text-orange-500 cursor-pointer text-xl md:text-2xl lg:text-4xl"
+              onClick={OnOpenCart}
+            />
             <div className="absolute -top-2 -right-3 lg:-right-4 bg-orange-500  rounded-full flex justify-center w-4 h-4 lg:w-6 lg:h-6">
               <p className="text-sm lg:text-lg text-white font-bold">8</p>
             </div>

@@ -1,21 +1,31 @@
+import { useState } from "react";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
 import NavBar from "../NavBar/NavBar";
 import "./HomePage.css";
+import Cart from "../Cart/Cart";
 
 const HomePage = () => {
+  const [openCart, setOpenCart] = useState(false);
+
+  function handleOpenCart() {
+    setOpenCart((openCart) => !openCart);
+  }
   return (
     <>
       <div>
-        <NavBar />
+        <NavBar OnOpenCart={handleOpenCart} />
       </div>
-      <div>
-        <Hero />
-      </div>
-      <div>
-        <Body />
-      </div>
+      {!openCart ? (
+        <div>
+          <Hero />
+          <Body />
+        </div>
+      ) : (
+        <Cart />
+      )}
+
       <div>
         <Footer />
       </div>
