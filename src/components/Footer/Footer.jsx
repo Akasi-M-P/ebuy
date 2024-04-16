@@ -14,10 +14,10 @@ const Footer = () => {
             <a href="">Contact Us</a>
           </div>
           <div className="flex gap-2">
-            <FaXTwitter className="text-xl" />
-            <FaFacebookSquare className="text-xl" />
-            <FaSquareInstagram className="text-xl" />
-            <FaLinkedin className="text-xl" />
+            <FaXTwitter className="text-2xl" />
+            <FaFacebookSquare className="text-2xl" />
+            <FaSquareInstagram className="text-2xl" />
+            <FaLinkedin className="text-2xl" />
           </div>
         </div>
         <div className="mx-auto flex flex-col gap-4">
