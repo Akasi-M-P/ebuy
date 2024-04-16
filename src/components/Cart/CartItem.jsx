@@ -29,7 +29,7 @@ const CartItem = () => {
       <hr />
       <div className="flex items-center gap-10 px-4">
         <div className="w-2/5">
-          <img src="/public/assets/doublespeaker.png" alt="" />
+          <img src="/assets/doublespeaker.png" alt="" />
         </div>
         <div className="flex flex-col gap-10 py-4">
           <div>
