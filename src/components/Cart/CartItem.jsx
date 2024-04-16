@@ -3,7 +3,7 @@ const CartItem = () => {
     <>
       <div className="flex items-center gap-10 px-4">
         <div className="w-2/5">
-          <img src="/public/assets/s22.png" alt="" />
+          <img src="/assets/s22.png" alt="" />
         </div>
         <div className="flex flex-col gap-10 py-4">
           <div>
