@@ -1,4 +1,5 @@
 import Body from "../Body/Body";
+import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
 import NavBar from "../NavBar/NavBar";
 import "./HomePage.css";
@@ -14,6 +15,9 @@ const HomePage = () => {
       </div>
       <div>
         <Body />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );
