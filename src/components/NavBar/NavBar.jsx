@@ -3,7 +3,14 @@ import { FaHeart } from "react-icons/fa6";
 import { RiShoppingCartFill } from "react-icons/ri";
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { useState } from "react";
+
 const NavBar = () => {
+  const [openMobileNav, setOpenMobileNav] = useState(false);
+
+  function handleMobileNav() {
+    setOpenMobileNav((openMobileNav) => !openMobileNav);
+  }
   return (
     <>
       <div className="flex items-center justify-between py-4 px-8 lg:py-8 lg:px-32 md:px-12 ">
@@ -36,27 +43,48 @@ const NavBar = () => {
         </div>
         <div className="md:hidden">
           <div>
-            <FaBars className=" text-orange-500 cursor-pointer text-xl" />
-            <IoMdClose className="hidden text-orange-500 cursor-pointer text-xl" />
+            {!openMobileNav ? (
+              <FaBars
+                className=" text-orange-500 cursor-pointer text-xl"
+                onClick={handleMobileNav}
+              />
+            ) : (
+              <IoMdClose
+                className="text-orange-500 cursor-pointer text-xl"
+                onClick={handleMobileNav}
+              />
+            )}
           </div>
         </div>
       </div>
       <hr />
-      {/* <div className="">
-        <div className="h-32 flex flex-col justify-center items-center gap-3 text-sm text-orange-500 font-bold">
-          <div>
-            <a href="">About</a>
-          </div>
-          <div className="w-full py-2">
-            <hr />
-          </div>
-          <div>
-            <a href="">Contact Us</a>
+      {openMobileNav && (
+        <div
+          className="z-10 absolute bg-white w-full h-56 -mt-1 py-7"
+          data-aos="flip-up"
+        >
+          <div className="h-32 flex flex-col  items-center gap-3 text-lg text-orange-500 font-bold ">
+            <div className="w-full py-2">
+              <hr />
+            </div>
+            <div className="mx-auto">
+              <a href="">About</a>
+            </div>
+            <div className="w-full py-2">
+              <hr />
+            </div>
+            <div>
+              <a href="">Contact Us</a>
+            </div>
+            <div className="w-full py-2">
+              <hr />
+            </div>
           </div>
         </div>
-        <hr />
-      </div> */}
+      )}
     </>
   );
 };
 export default NavBar;
+
+
