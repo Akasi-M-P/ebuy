@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./NavBar.css";
 import { FaHeart } from "react-icons/fa6";
 import { RiShoppingCartFill } from "react-icons/ri";
@@ -27,7 +28,7 @@ const NavBar = ({ OnOpenCart }) => {
             <a href="">Contact Us</a>
           </div>
         </div>
-        <div className="flex gap-10 md:gap-20 lg:gap-32">
+        <div className="flex gap-20 md:gap-20 lg:gap-32">
           <div className="relative">
             <FaHeart className="text-orange-500 cursor-pointer text-xl md:text-2xl lg:text-4xl" />
             <div className="absolute -top-2 -right-3 lg:-right-4 bg-orange-500  rounded-full flex justify-center w-4 h-4 lg:w-6 lg:h-6">
@@ -89,5 +90,3 @@ const NavBar = ({ OnOpenCart }) => {
   );
 };
 export default NavBar;
-
-
