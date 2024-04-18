@@ -23,7 +23,7 @@ const HomePage = () => {
           <Body />
         </div>
       ) : (
-        <Cart />
+        <Cart OnOpenCart={handleOpenCart} />
       )}
 
       <div>
