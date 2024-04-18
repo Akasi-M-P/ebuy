@@ -6,7 +6,7 @@ import { FaWindowClose } from "react-icons/fa";
 const Cart = ({ OnOpenCart }) => {
   return (
     <>
-      <div className="h-screen lg:h-full" data-aos="flip-up">
+      <div className="h-full" data-aos="flip-up">
         <div className="w-full flex justify-between p-5 md:w-10/12 md:mx-auto">
           <p className="font-bold text-orange-500 text-sm md:text-lg lg:text-2xl">
             Your Cart Items
