@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 
-const NavBar = ({ OnOpenCart }) => {
+const NavBar = ({ onOpenCart, onOpenWishList }) => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
 
   function handleMobileNav() {
@@ -30,7 +30,10 @@ const NavBar = ({ OnOpenCart }) => {
         </div>
         <div className="flex gap-20 md:gap-20 lg:gap-32">
           <div className="relative">
-            <FaHeart className="text-orange-500 cursor-pointer text-xl md:text-2xl lg:text-4xl" />
+            <FaHeart
+              className="text-orange-500 cursor-pointer text-xl md:text-2xl lg:text-4xl"
+              onClick={onOpenWishList}
+            />
             <div className="absolute -top-2 -right-3 lg:-right-4 bg-orange-500  rounded-full flex justify-center w-4 h-4 lg:w-6 lg:h-6">
               <p className="text-sm lg:text-lg text-white font-bold">5</p>
             </div>
@@ -38,7 +41,7 @@ const NavBar = ({ OnOpenCart }) => {
           <div className="relative">
             <RiShoppingCartFill
               className="text-orange-500 cursor-pointer text-xl md:text-2xl lg:text-4xl"
-              onClick={OnOpenCart}
+              onClick={onOpenCart}
             />
             <div className="absolute -top-2 -right-3 lg:-right-4 bg-orange-500  rounded-full flex justify-center w-4 h-4 lg:w-6 lg:h-6">
               <p className="text-sm lg:text-lg text-white font-bold">8</p>

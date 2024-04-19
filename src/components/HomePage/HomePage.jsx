@@ -5,30 +5,34 @@ import Hero from "../Hero/Hero";
 import NavBar from "../NavBar/NavBar";
 import "./HomePage.css";
 import Cart from "../Cart/Cart";
+import WishList from "../WishList/WishList";
 
 const HomePage = () => {
   const [openCart, setOpenCart] = useState(false);
+  const [openWishList, setOpenWishList] = useState(false);
 
   function handleOpenCart() {
     setOpenCart((openCart) => !openCart);
   }
+
+  function handleOpenWishList() {
+    setOpenWishList((openWishList) => !openWishList);
+    console.log("WishList");
+  }
   return (
     <>
-      <div>
-        <NavBar OnOpenCart={handleOpenCart} />
-      </div>
-      {!openCart ? (
-        <div>
+      <NavBar onOpenCart={handleOpenCart} onOpenWishList={handleOpenWishList} />
+
+      {openCart && <Cart OnOpenCart={handleOpenCart} />}
+      {openWishList && <WishList />}
+      {!openCart && !openWishList && (
+        <>
           <Hero />
           <Body />
-        </div>
-      ) : (
-        <Cart OnOpenCart={handleOpenCart} />
+        </>
       )}
 
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };
