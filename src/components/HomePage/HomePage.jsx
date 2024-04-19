@@ -13,18 +13,19 @@ const HomePage = () => {
 
   function handleOpenCart() {
     setOpenCart((openCart) => !openCart);
+    setOpenWishList(false);
   }
 
   function handleOpenWishList() {
     setOpenWishList((openWishList) => !openWishList);
-    console.log("WishList");
+    setOpenCart(false);
   }
   return (
     <>
       <NavBar onOpenCart={handleOpenCart} onOpenWishList={handleOpenWishList} />
 
       {openCart && <Cart OnOpenCart={handleOpenCart} />}
-      {openWishList && <WishList />}
+      {openWishList && <WishList onOpenWishList={handleOpenWishList} />}
       {!openCart && !openWishList && (
         <>
           <Hero />

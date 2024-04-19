@@ -3,7 +3,7 @@ import "./WishList.css";
 import WishListItem from "./WishListItem";
 import { FaWindowClose } from "react-icons/fa";
 
-const WishList = ({ OnOpenCart }) => {
+const WishList = ({ onOpenWishList }) => {
   return (
     <>
       <div className="h-full" data-aos="flip-up">
@@ -13,7 +13,7 @@ const WishList = ({ OnOpenCart }) => {
           </p>
           <FaWindowClose
             className=" text-orange-500 text-lg md:text-2xl lg:text-4xl cursor-pointer"
-            onClick={OnOpenCart}
+            onClick={onOpenWishList}
           />
         </div>
         <div>
