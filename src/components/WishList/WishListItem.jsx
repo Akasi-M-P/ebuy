@@ -1,3 +1,4 @@
+import { FaCartPlus } from "react-icons/fa";
 const WishListItem = () => {
   return (
     <>
@@ -23,13 +24,9 @@ const WishListItem = () => {
               remove
             </button>
           </div>
-          <div className="flex border justify-between items-center gap-2 p-0 rounded-md ">
-            <button className="border px-2 text-lg rounded-sm lg:text-2xl">
-              -
-            </button>
-            <p className="lg:text-2xl">1</p>
-            <button className="border border-gray-400 px-2 text-lg rounded-sm lg:text-2xl">
-              +
+          <div className="">
+            <button className="border-4 border-orange-200 px-5 py-2 text-sm md:text-lg rounded-md lg:text-2xl">
+              <FaCartPlus className="text-orange-500 text-xl" />
             </button>
           </div>
         </div>
@@ -57,13 +54,9 @@ const WishListItem = () => {
               remove
             </button>
           </div>
-          <div className="flex border justify-between items-center gap-2 p-0 rounded-md ">
-            <button className="border px-2 text-lg rounded-sm lg:text-2xl">
-              -
-            </button>
-            <p className="lg:text-2xl">1</p>
-            <button className="border border-gray-400 px-2 text-lg rounded-sm lg:text-2xl">
-              +
+          <div className="">
+            <button className="border-4 border-orange-200 px-5 py-2 text-sm md:text-lg rounded-md lg:text-2xl">
+              <FaCartPlus className="text-orange-500 text-xl" />
             </button>
           </div>
         </div>
@@ -91,13 +84,9 @@ const WishListItem = () => {
               remove
             </button>
           </div>
-          <div className="flex border justify-between items-center gap-2 p-0 rounded-md ">
-            <button className="border px-2 text-lg rounded-sm lg:text-2xl">
-              -
-            </button>
-            <p className="lg:text-2xl">1</p>
-            <button className="border border-gray-400 px-2 text-lg rounded-sm lg:text-2xl">
-              +
+          <div className="">
+            <button className="border-4 border-orange-200 px-5 py-2 text-sm md:text-lg rounded-md lg:text-2xl">
+              <FaCartPlus className="text-orange-500 text-xl" />
             </button>
           </div>
         </div>
@@ -125,13 +114,9 @@ const WishListItem = () => {
               remove
             </button>
           </div>
-          <div className="flex border justify-between items-center gap-2 p-0 rounded-md ">
-            <button className="border px-2 text-lg rounded-sm lg:text-2xl">
-              -
-            </button>
-            <p className="lg:text-2xl">1</p>
-            <button className="border border-gray-400 px-2 text-lg rounded-sm lg:text-2xl">
-              +
+          <div className="">
+            <button className="border-4 border-orange-200 px-5 py-2 text-sm md:text-lg rounded-md lg:text-2xl">
+              <FaCartPlus className="text-orange-500 text-xl" />
             </button>
           </div>
         </div>

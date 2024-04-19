@@ -19,21 +19,10 @@ const WishList = ({ onOpenWishList }) => {
         <div>
           <WishListItem />
         </div>
-        <div className="m-4">
-          <p className="text-sm text-center font-bold md:text-xl lg:text-2xl">
-            <span>Subtotal : </span>$ 32000.00
-          </p>
-        </div>
-        <div className="w-full flex justify-center">
-          <button className="border p-3  w-2/3 rounded-xl bg-orange-600">
-            <p className="text-center text-lg text-white font-bold md:text-xl lg:text-2xl">
-              Proceed to checkout
-            </p>
-          </button>
-        </div>
+
         <div className="w-full flex justify-center m-4 lg:m-8">
-          <button className="text-sm text-red-400 md:text-lg">
-            ClearWishList
+          <button className="border-2 border-orange-200 p-2 rounded-md text-sm text-red-400 md:text-lg">
+            clear wish list
           </button>
         </div>
       </div>
