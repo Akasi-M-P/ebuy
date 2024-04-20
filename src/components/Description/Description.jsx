@@ -67,6 +67,13 @@ const Description = ({ onOpenProductDescription }) => {
             </p>
           </div>
         </div>
+        <div className="w-full flex justify-center">
+          <button className="border p-3  w-2/3 rounded-xl bg-orange-600">
+            <p className="text-center text-lg text-white font-bold md:text-xl lg:text-2xl">
+              Add to Cart
+            </p>
+          </button>
+        </div>
       </div>
     </>
   );
