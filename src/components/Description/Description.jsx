@@ -15,7 +15,7 @@ const Description = ({ onOpenProductDescription }) => {
           />
         </div>
         <div>
-          <img src="/public/assets/s22.png" alt="" />
+          <img src="/assets/s22.png" alt="" />
         </div>
         <div className="flex justify-between px-8">
           <div className="flex flex-col gap-2">
