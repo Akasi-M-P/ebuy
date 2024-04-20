@@ -6,10 +6,12 @@ import NavBar from "../NavBar/NavBar";
 import "./HomePage.css";
 import Cart from "../Cart/Cart";
 import WishList from "../WishList/WishList";
+import Description from "../Description/Description";
 
 const HomePage = () => {
   const [openCart, setOpenCart] = useState(false);
   const [openWishList, setOpenWishList] = useState(false);
+  const [openProductDescription, setOpenProductDescription] = useState(false);
 
   function handleOpenCart() {
     setOpenCart((openCart) => !openCart);
@@ -20,18 +22,28 @@ const HomePage = () => {
     setOpenWishList((openWishList) => !openWishList);
     setOpenCart(false);
   }
+
+  function handleOpenProductDescription() {
+    setOpenProductDescription(
+      (openProductDescription) => !openProductDescription
+    );
+  }
   return (
     <>
       <NavBar onOpenCart={handleOpenCart} onOpenWishList={handleOpenWishList} />
 
       {openCart && <Cart OnOpenCart={handleOpenCart} />}
       {openWishList && <WishList onOpenWishList={handleOpenWishList} />}
-      {!openCart && !openWishList && (
+      {openProductDescription && (
+        <Description onOpenProductDescription={handleOpenProductDescription} />
+      )}
+      {!openCart && !openWishList && !openProductDescription && (
         <>
           <Hero />
-          <Body />
+          <Body onOpenProductDescription={handleOpenProductDescription} />
         </>
       )}
+      {/* <Description /> */}
 
       <Footer />
     </>

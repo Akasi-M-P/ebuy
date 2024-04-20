@@ -3,10 +3,13 @@ import "./Product.css";
 import { FaHeart } from "react-icons/fa6";
 import { FaCartPlus } from "react-icons/fa";
 
-const Product = ({ product }) => {
+const Product = ({ product, onOpenProductDescription }) => {
   return (
     <>
-      <div className="product border rounded-md relative h-96  mt-4 md:border md:px-2 md:rounded-lg">
+      <div
+        className="product border rounded-md relative h-96  mt-4 md:border md:px-2 md:rounded-lg"
+        onClick={onOpenProductDescription}
+      >
         <div>
           <img
             src={product.image}
@@ -23,8 +26,8 @@ const Product = ({ product }) => {
             </p>
           </div>
           <div className="">
-            <button className="border-2 border-orange-200 px-2 py-2 text-sm md:text-lg rounded-md lg:text-2xl">
-              <FaCartPlus className="text-orange-500 text-xl" />
+            <button className="border-2 border-orange-200 px-2 py-2 md:px-8 md:py-4 text-sm md:text-lg rounded-md lg:text-2xl">
+              <FaCartPlus className="text-orange-500 text-xl md:text-2xl" />
             </button>
           </div>
         </div>
