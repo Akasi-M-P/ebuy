@@ -8,7 +8,7 @@ import "./HomePage.css";
 import Cart from "../Cart/Cart";
 import WishList from "../WishList/WishList";
 import Details from "../Details/Details";
-import { useEffect, useRef } from "react";
+
 
 const HomePage = () => {
   const [openCart, setOpenCart] = useState(false);
@@ -29,27 +29,15 @@ const HomePage = () => {
   function handleProductDetails() {
     setOpenProductDetails((openProductDetails) => !openProductDetails);
     console.log("close details page");
-    setSelectedProduct((productSelected) => !productSelected);
   }
 
   function handleProductClick(product) {
     setSelectedProduct(product);
   }
 
-  const detailsRef = useRef(null);
-
-  useEffect(() => {
-    if (detailsRef.current) {
-      detailsRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, []);
-
   return (
     <>
-      <div ref={detailsRef}>
+      <div>
         <NavBar
           onOpenCart={handleOpenCart}
           onOpenWishList={handleOpenWishList}
