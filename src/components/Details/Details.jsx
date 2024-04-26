@@ -19,7 +19,7 @@ const Details = ({ onProductDetails, product }) => {
   return (
     <>
       <div ref={detailsRef}>
-        <div className="h-full mb-10">
+        <div className="h-full mb-10 block">
           <div className="flex flex-row-reverse p-5">
             <FaWindowClose
               className=" text-orange-500 text-lg md:text-2xl lg:text-4xl cursor-pointer"
