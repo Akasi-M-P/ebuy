@@ -38,7 +38,7 @@ const ProductDetails = ({ product }) => {
         </div>
         <div className="details px-5 py-5">
           <div>
-            <p className="font-bold">Details</p>
+            <p className="font-bold">Description</p>
           </div>
           <div>
             <p>{product.description}</p>
