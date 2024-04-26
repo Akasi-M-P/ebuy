@@ -8,7 +8,7 @@ const ProductDetails = ({ product }) => {
       <div>
         <div className="flex flex-row-reverse px-5 py-4"></div>
         <div>
-          <img src={product.image} alt={product.name} />
+          <img src={product.image} alt={product.name} data-aos="flip-up" />
         </div>
         <div className="flex justify-between px-8">
           <div className="flex flex-col gap-2">
