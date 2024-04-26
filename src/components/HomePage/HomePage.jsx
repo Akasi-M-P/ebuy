@@ -26,13 +26,15 @@ const HomePage = () => {
     setOpenCart(false);
   }
 
-  function handleProductDetails() {
-    setOpenProductDetails((openProductDetails) => !openProductDetails);
-    console.log("close details page");
-  }
 
   function handleProductClick(product) {
     setSelectedProduct(product);
+    setOpenProductDetails(true);
+  }
+
+  function handleCloseProductDetails() {
+    setOpenProductDetails((closeProduct) => !closeProduct);
+    console.log("close");
   }
 
   return (
@@ -45,25 +47,18 @@ const HomePage = () => {
 
         {openCart && <Cart OnOpenCart={handleOpenCart} />}
         {openWishList && <WishList onOpenWishList={handleOpenWishList} />}
-        {selectedProduct && (
+        {selectedProduct && openProductDetails && (
           <Details
-            onProductDetails={handleProductDetails}
+            onProductDetails={handleCloseProductDetails}
             product={selectedProduct}
           />
         )}
-        {!openCart &&
-          !openWishList &&
-          !openProductDetails &&
-          !selectedProduct && (
-            <>
-              <Hero />
-              <Body
-                products={products}
-                onProductDetails={handleProductDetails}
-                onProductClick={handleProductClick}
-              />
-            </>
-          )}
+        {!openCart && !openWishList && !openProductDetails && (
+          <>
+            <Hero />
+            <Body products={products} onProductClick={handleProductClick} />
+          </>
+        )}
 
         <Footer />
       </div>
