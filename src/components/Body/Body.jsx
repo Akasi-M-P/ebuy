@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import Product from "../Product/Product";
 import "./Body.css";
-import { products } from "/src/components/Data/Data";
 
-const Body = ({ onOpenProductDescription }) => {
+const Body = ({ products, onProductDetails, onProductClick }) => {
   return (
     <>
       <div className=" mt-4">
@@ -13,7 +12,8 @@ const Body = ({ onOpenProductDescription }) => {
             <Product
               key={product.id}
               product={product}
-              onOpenProductDescription={onOpenProductDescription}
+              onProductDetails={onProductDetails}
+              onProductClick={onProductClick}
             />
           ))}
         </div>
