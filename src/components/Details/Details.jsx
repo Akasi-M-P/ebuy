@@ -20,9 +20,9 @@ const Details = ({ onProductDetails, product }) => {
     <>
       <div ref={detailsRef}>
         <div className="h-full mb-10 block">
-          <div className="flex flex-row-reverse p-5">
+          <div className="flex flex-row-reverse px-8 py-4">
             <FaWindowClose
-              className=" text-orange-500 text-lg md:text-2xl lg:text-4xl cursor-pointer"
+              className=" text-orange-500 text-xl md:text-2xl lg:text-4xl cursor-pointer"
               onClick={onProductDetails}
             />
           </div>
