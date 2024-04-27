@@ -145,7 +145,9 @@ const ProductDetails = ({ product }) => {
                 gaming marathons. Comfortable fit and reliable performance make
                 it a top choice for gamers.
               </p>
-              <p className="text-sm md:text-lg lg:text-xl">by Sarah</p>
+              <p className="text-sm font-bold text-green-400 md:text-lg lg:text-xl">
+                by Sarah
+              </p>
             </div>
           </div>
           <hr />
@@ -166,7 +168,9 @@ const ProductDetails = ({ product }) => {
                 long-lasting battery. Sleek design and user-friendly interface
                 make it a pleasure to use.
               </p>
-              <p className="text-sm md:text-lg lg:text-xl">by David</p>
+              <p className="text-sm font-bold text-green-400 md:text-lg lg:text-xl">
+                by David
+              </p>
             </div>
           </div>
           <hr />
@@ -187,7 +191,9 @@ const ProductDetails = ({ product }) => {
                 bass and crystal-clear highs. Easy setup and stylish design
                 elevate any entertainment setup.
               </p>
-              <p className="text-sm md:text-lg lg:text-xl">by Kwame</p>
+              <p className="text-sm font-bold text-green-400 md:text-lg lg:text-xl">
+                by Kwame
+              </p>
             </div>
           </div>
           <hr />
