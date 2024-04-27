@@ -127,7 +127,7 @@ const ProductDetails = ({ product }) => {
           <div className="my-4">
             <p className="font-bold md:text-xl lg:text-2xl">Reviews</p>
           </div>
-          <div className="review border px-4 py-2 rounded-md shadow-md border-orange-100">
+          <div className="review  px-4 py-2">
             <div className=" flex justify-between my-2">
               <div className="flex items-center text-orange-500 md:text-lg lg:text-2xl">
                 <CiStar />
@@ -138,14 +138,15 @@ const ProductDetails = ({ product }) => {
               </div>
               <p className="md:text-lg lg:text-xl">24/12/2023</p>
             </div>
-            <div className="review">
+            <div className="">
               <p className="text-lg md:text-lg lg:text-xl">
                 I like the product
               </p>
               <p className="text-sm md:text-lg lg:text-xl">by Sarah</p>
             </div>
           </div>
-          <div className="review border px-4 py-2 rounded-md shadow-md border-orange-100">
+          <hr />
+          <div className="review  px-4 py-2 ">
             <div className=" flex justify-between my-2">
               <div className="flex items-center text-orange-500 md:text-lg lg:text-2xl">
                 <CiStar />
@@ -156,14 +157,15 @@ const ProductDetails = ({ product }) => {
               </div>
               <p className="md:text-lg lg:text-xl">24/12/2023</p>
             </div>
-            <div className="review">
+            <div className="">
               <p className="text-lg md:text-lg lg:text-xl">
                 I like the product
               </p>
               <p className="text-sm md:text-lg lg:text-xl">by David</p>
             </div>
           </div>
-          <div className="review border px-4 py-2 rounded-md shadow-md border-orange-100">
+          <hr />
+          <div className="review px-4 py-2 ">
             <div className=" flex justify-between my-2">
               <div className="flex items-center text-orange-500 md:text-lg lg:text-2xl">
                 <CiStar />
@@ -174,13 +176,14 @@ const ProductDetails = ({ product }) => {
               </div>
               <p className="md:text-lg lg:text-xl">24/12/2023</p>
             </div>
-            <div className="review">
+            <div className="">
               <p className="text-lg md:text-lg lg:text-xl">
                 I like the product
               </p>
               <p className="text-sm md:text-lg lg:text-xl">by Kwame</p>
             </div>
           </div>
+          <hr />
         </div>
         <div className="w-full flex justify-center my-5 lg:mt-28 lg:mb-28">
           <button className="border p-3  w-2/3 rounded-xl bg-orange-600 lg:w-2/4">
