@@ -4,16 +4,16 @@ import { CiStar } from "react-icons/ci";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-cube';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/effect-cube";
+import "swiper/css/pagination";
 
 // import required modules
-import { EffectCube, Pagination } from 'swiper/modules';
+import { EffectCube, Pagination } from "swiper/modules";
 
 const ProductDetails = ({ product }) => {
+  const boxAvailable = product.box?.length > 0;
   return (
     <>
       <div>
@@ -94,12 +94,30 @@ const ProductDetails = ({ product }) => {
             </div>
           </div>
         </div>
-        <div className="details px-5 py-5 lg:px-20">
+        <div className="description px-5 py-5 lg:px-20">
           <div>
             <p className="font-bold md:text-xl lg:text-2xl">Description</p>
           </div>
           <div>
             <p className="md:text-lg lg:text-xl">{product.description}</p>
+          </div>
+        </div>
+        <div className="In-Box  px-5 py-5 lg:px-20">
+          <div>
+            {boxAvailable ? (
+              <p className="font-bold md:text-xl lg:text-2xl">In-Box</p>
+            ) : (
+              ""
+            )}
+          </div>
+          <div>
+            <ul className="md:text-lg lg:text-xl">
+              {product.box?.map((item, index) => (
+                <li key={index}>
+                  <span>-</span> {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className="w-full flex justify-center lg:mt-28 lg:mb-28">
