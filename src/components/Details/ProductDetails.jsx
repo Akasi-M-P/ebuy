@@ -141,7 +141,9 @@ const ProductDetails = ({ product }) => {
             </div>
             <div className="">
               <p className="text-lg md:text-lg lg:text-xl">
-                I like the product
+                The XYZ Gaming Headset delivers immersive sound, perfect for
+                gaming marathons. Comfortable fit and reliable performance make
+                it a top choice for gamers.
               </p>
               <p className="text-sm md:text-lg lg:text-xl">by Sarah</p>
             </div>
@@ -160,7 +162,9 @@ const ProductDetails = ({ product }) => {
             </div>
             <div className="">
               <p className="text-lg md:text-lg lg:text-xl">
-                I like the product
+                ABC Laptop is a powerhouse with lightning-fast speeds and a
+                long-lasting battery. Sleek design and user-friendly interface
+                make it a pleasure to use.
               </p>
               <p className="text-sm md:text-lg lg:text-xl">by David</p>
             </div>
@@ -179,7 +183,9 @@ const ProductDetails = ({ product }) => {
             </div>
             <div className="">
               <p className="text-lg md:text-lg lg:text-xl">
-                I like the product
+                QRS Wireless Speakers offer impressive audio quality with deep
+                bass and crystal-clear highs. Easy setup and stylish design
+                elevate any entertainment setup.
               </p>
               <p className="text-sm md:text-lg lg:text-xl">by Kwame</p>
             </div>
