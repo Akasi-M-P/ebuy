@@ -124,9 +124,10 @@ const ProductDetails = ({ product }) => {
         </div>
         <hr />
         <div className="reviews px-5 py-5 lg:px-20 flex flex-col gap-5">
-          <div className="my-4">
+          <div className="my-2">
             <p className="font-bold md:text-xl lg:text-2xl">Reviews</p>
           </div>
+          <hr />
           <div className="review  px-4 py-2">
             <div className=" flex justify-between my-2">
               <div className="flex items-center text-orange-500 md:text-lg lg:text-2xl">
