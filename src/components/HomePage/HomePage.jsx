@@ -19,13 +19,14 @@ const HomePage = () => {
   function handleOpenCart() {
     setOpenCart((openCart) => !openCart);
     setOpenWishList(false);
+    setOpenProductDetails(false);
   }
 
   function handleOpenWishList() {
     setOpenWishList((openWishList) => !openWishList);
     setOpenCart(false);
+    setOpenProductDetails(false);
   }
-
 
   function handleProductClick(product) {
     setSelectedProduct(product);

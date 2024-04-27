@@ -18,7 +18,7 @@ const ProductDetails = ({ product }) => {
     <>
       <div>
         <div className="md:flex md:justify-center md:gap-5 md:px-8">
-          <div className="mb-10 lg:w-1/2">
+          <div className="mb-10 md:w-1/2 lg:w-1/2">
             <Swiper
               effect={"cube"}
               grabCursor={true}
@@ -62,7 +62,7 @@ const ProductDetails = ({ product }) => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className="flex justify-between px-8 md:flex-col md:justify-center md:gap-16 md:px-10 border-l md:shadow-sm lg:w-1/2">
+          <div className="flex justify-between px-8 md:flex-col md:justify-center md:gap-16 md:px-10 border-l md:shadow-sm md:w-2/6 lg:w-1/2">
             <div className="flex flex-col gap-2">
               <p className="font-bold text-xl md:text-2xl lg:text-3xl">
                 {product.name}
