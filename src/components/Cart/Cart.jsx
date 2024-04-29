@@ -3,10 +3,15 @@ import "./Cart.css";
 import CartItem from "./CartItem";
 import { FaWindowClose } from "react-icons/fa";
 
-const Cart = ({ OnOpenCart, cartProducts }) => {
+const Cart = ({
+  OnOpenCart,
+  cartProducts,
+  onDeleteCartProduct,
+  onProductQuantity,
+}) => {
   return (
     <>
-      <div className="h-full" data-aos="flip-up">
+      <div className="h-full md:h-screen" data-aos="flip-up">
         <div className="w-full flex justify-between p-5 md:w-10/12 md:mx-auto">
           <p className="font-bold text-orange-500 text-sm md:text-lg lg:text-2xl">
             Your Cart Items
@@ -17,7 +22,11 @@ const Cart = ({ OnOpenCart, cartProducts }) => {
           />
         </div>
         <div>
-          <CartItem cartProducts={cartProducts} />
+          <CartItem
+            cartProducts={cartProducts}
+            onDeleteCartProduct={onDeleteCartProduct}
+            onProductQuantity={onProductQuantity}
+          />
         </div>
         <div className="m-4">
           <p className="text-sm text-center font-bold md:text-xl lg:text-2xl">

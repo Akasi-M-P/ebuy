@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { products } from "/src/components/Data/Data";
 import Body from "../Body/Body";
@@ -8,7 +9,6 @@ import "./HomePage.css";
 import Cart from "../Cart/Cart";
 import WishList from "../WishList/WishList";
 import Details from "../Details/Details";
-
 
 const HomePage = () => {
   const [openCart, setOpenCart] = useState(false);
@@ -79,6 +79,24 @@ const HomePage = () => {
     );
   }
 
+  // Deletes a product from the cart list
+  function handleDeleteCartProduct(product) {
+    const updatedCart = cart.filter(
+      (cartProduct) => cartProduct.id !== product
+    );
+    setCart(updatedCart);
+  }
+
+  // Handles product quantity changes in cart
+  function handleProductQuantity(cartItem, newQuantity) {
+    const updatedCart = cart.map((product) =>
+      product.id === cartItem
+        ? { ...product, quantity: Math.max(1, newQuantity) }
+        : product
+    );
+    setCart(updatedCart);
+  }
+
   return (
     <>
       <div>
@@ -88,7 +106,14 @@ const HomePage = () => {
           cartLength={cartLength}
         />
 
-        {openCart && <Cart OnOpenCart={handleOpenCart} cartProducts={cart} />}
+        {openCart && (
+          <Cart
+            OnOpenCart={handleOpenCart}
+            cartProducts={cart}
+            onDeleteCartProduct={handleDeleteCartProduct}
+            onProductQuantity={handleProductQuantity}
+          />
+        )}
         {openWishList && <WishList onOpenWishList={handleOpenWishList} />}
         {selectedProduct && openProductDetails && (
           <Details
