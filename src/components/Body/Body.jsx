@@ -2,7 +2,12 @@
 import Product from "../Product/Product";
 import "./Body.css";
 
-const Body = ({ products, onProductClick }) => {
+const Body = ({
+  products,
+  onProductClick,
+  onAddProductToCart,
+  onAddedProduct,
+}) => {
   return (
     <>
       <div className=" mt-4">
@@ -13,6 +18,8 @@ const Body = ({ products, onProductClick }) => {
               key={product.id}
               product={product}
               onProductClick={onProductClick}
+              onAddProductToCart={onAddProductToCart}
+              onAddedProduct={onAddedProduct}
             />
           ))}
         </div>

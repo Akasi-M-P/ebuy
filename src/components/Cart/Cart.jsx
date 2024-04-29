@@ -3,7 +3,7 @@ import "./Cart.css";
 import CartItem from "./CartItem";
 import { FaWindowClose } from "react-icons/fa";
 
-const Cart = ({ OnOpenCart }) => {
+const Cart = ({ OnOpenCart, cartProducts }) => {
   return (
     <>
       <div className="h-full" data-aos="flip-up">
@@ -17,7 +17,7 @@ const Cart = ({ OnOpenCart }) => {
           />
         </div>
         <div>
-          <CartItem />
+          <CartItem cartProducts={cartProducts} />
         </div>
         <div className="m-4">
           <p className="text-sm text-center font-bold md:text-xl lg:text-2xl">
