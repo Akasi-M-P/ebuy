@@ -150,8 +150,9 @@ const HomePage = () => {
             />
           </>
         )}
-
-        <Footer />
+        <div>
+          <Footer />
+        </div>
       </div>
     </>
   );
