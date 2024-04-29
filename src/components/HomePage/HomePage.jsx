@@ -97,6 +97,21 @@ const HomePage = () => {
     setCart(updatedCart);
   }
 
+  // Calculates subtotal price of the cart items
+  function handleSubtotalPrice() {
+    const subtotalPrice = cart.reduce(
+      (total, product) => total + product.price * product.quantity,
+      0
+    );
+    return subtotalPrice.toFixed(2);
+  }
+
+  // Deletes entire cart items
+  function handleClearCart() {
+    setCart([]);
+    setAddedProduct(null);
+  }
+
   return (
     <>
       <div>
@@ -112,6 +127,8 @@ const HomePage = () => {
             cartProducts={cart}
             onDeleteCartProduct={handleDeleteCartProduct}
             onProductQuantity={handleProductQuantity}
+            subtotalPrice={handleSubtotalPrice}
+            onClearAllProducts={handleClearCart}
           />
         )}
         {openWishList && <WishList onOpenWishList={handleOpenWishList} />}
@@ -129,6 +146,7 @@ const HomePage = () => {
               onProductClick={handleProductClick}
               onAddProductToCart={handleAddProductToCart}
               onAddedProduct={handleAddedProduct}
+              addedProduct={addedProduct}
             />
           </>
         )}

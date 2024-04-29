@@ -8,10 +8,12 @@ const Cart = ({
   cartProducts,
   onDeleteCartProduct,
   onProductQuantity,
+  subtotalPrice,
+  onClearAllProducts,
 }) => {
   return (
     <>
-      <div className="h-full md:h-screen" data-aos="flip-up">
+      <div className="h-screen md:h-screen" data-aos="flip-up">
         <div className="w-full flex justify-between p-5 md:w-10/12 md:mx-auto">
           <p className="font-bold text-orange-500 text-sm md:text-lg lg:text-2xl">
             Your Cart Items
@@ -30,7 +32,7 @@ const Cart = ({
         </div>
         <div className="m-4">
           <p className="text-sm text-center font-bold md:text-xl lg:text-2xl">
-            <span>Subtotal : </span>$ 32000.00
+            <span>Subtotal : </span>$ {subtotalPrice()}
           </p>
         </div>
         <div className="w-full flex justify-center">
@@ -41,7 +43,10 @@ const Cart = ({
           </button>
         </div>
         <div className="w-full flex justify-center m-4 lg:m-8">
-          <button className="text-sm text-red-400 md:text-lg">
+          <button
+            className="text-sm text-red-400 md:text-lg"
+            onClick={onClearAllProducts}
+          >
             Clear cart
           </button>
         </div>
