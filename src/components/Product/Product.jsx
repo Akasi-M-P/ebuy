@@ -45,7 +45,11 @@ const Product = ({
                 $ {product.price}
               </p>
             </div>
-            <div className="">
+            <div className="relative">
+              <div className="absolute -top-8 -left-4 lg:-top-8 lg:left-4 font-bold text-lg">
+                {isAdded && markedAdded && "Added"}
+              </div>
+
               <button className="border-2 border-orange-200 px-2 py-2 md:px-8 md:py-4 text-sm md:text-lg rounded-md lg:text-2xl">
                 {isAdded && markedAdded ? (
                   <BsFillCartCheckFill className="text-orange-500 text-xl md:text-2xl" />
