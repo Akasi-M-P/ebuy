@@ -46,7 +46,7 @@ const Product = ({
               </p>
             </div>
             <div className="relative">
-              <div className="absolute -top-8 -left-4 lg:-top-8 lg:left-4 font-bold text-lg">
+              <div className="absolute text-orange-500 -top-8 -left-4 lg:-top-8 lg:left-4 font-bold text-lg">
                 {isAdded && markedAdded && "Added"}
               </div>
 
