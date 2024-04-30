@@ -45,7 +45,7 @@ const ProductDetails = ({ product, onAddProductToCart, onAddToWishList }) => {
                 shadow: true,
                 slideShadows: true,
                 shadowOffset: 20,
-                shadowScale: 0.94,
+                shadowScale: 0,
               }}
               pagination={true}
               modules={[EffectCube, Pagination]}
