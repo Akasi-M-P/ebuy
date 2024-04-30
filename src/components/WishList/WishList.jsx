@@ -3,7 +3,13 @@ import "./WishList.css";
 import WishListItem from "./WishListItem";
 import { FaWindowClose } from "react-icons/fa";
 
-const WishList = ({ onOpenWishList }) => {
+const WishList = ({
+  onOpenWishList,
+  wishList,
+  onAddProductToCart,
+  onDeleteWishListProduct,
+  onClearWishList,
+}) => {
   return (
     <>
       <div className="h-full" data-aos="flip-up">
@@ -17,11 +23,18 @@ const WishList = ({ onOpenWishList }) => {
           />
         </div>
         <div>
-          <WishListItem />
+          <WishListItem
+            wishList={wishList}
+            onAddProductToCart={onAddProductToCart}
+            onDeleteWishListProduct={onDeleteWishListProduct}
+          />
         </div>
 
         <div className="w-full flex justify-center m-4 lg:m-8">
-          <button className="border-2 border-orange-200 p-2 rounded-md text-sm text-red-400 md:text-lg">
+          <button
+            className="border-2 border-orange-200 p-2 rounded-md text-sm text-red-400 md:text-lg"
+            onClick={onClearWishList}
+          >
             clear wish list
           </button>
         </div>

@@ -11,6 +11,7 @@ const Product = ({
   onAddProductToCart,
   onAddedProduct,
   addedProduct,
+  onAddToWishList,
 }) => {
   const [markedAdded, setMarkedAdded] = useState(false);
   // handle product click and adding to cart
@@ -24,19 +25,29 @@ const Product = ({
     }, 3000);
   }
 
+  // Handle adding product to wishlist
+  function handleAddToWishList() {
+    onAddToWishList(product);
+  }
+
   const isAdded = addedProduct?.id === product.id;
 
   return (
     <>
       <div>
         <div className="product border cursor-pointer rounded-md relative h-96  mt-4 md:border md:px-2 md:rounded-lg">
+          <div className="mb-14">
+            <FaHeart
+              className="absolute right-5 top-5 text-red-500 cursor-pointer text-2xl md:text-2xl lg:text-4xl"
+              onClick={handleAddToWishList}
+            />
+          </div>
           <div onClick={() => onProductClick(product)}>
             <img
               src={product.image}
               alt={product.name}
               className="h-64 object-contain mt-6"
             />
-            <FaHeart className="absolute right-5 top-5 text-red-500 cursor-pointer text-2xl md:text-2xl lg:text-4xl" />
           </div>
           <div className="flex justify-between items-center px-2">
             <div className="flex flex-col gap-2 py-2">

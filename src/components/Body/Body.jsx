@@ -8,6 +8,7 @@ const Body = ({
   onAddProductToCart,
   onAddedProduct,
   addedProduct,
+  onAddToWishList,
 }) => {
   return (
     <>
@@ -22,6 +23,7 @@ const Body = ({
               onAddProductToCart={onAddProductToCart}
               onAddedProduct={onAddedProduct}
               addedProduct={addedProduct}
+              onAddToWishList={onAddToWishList}
             />
           ))}
         </div>

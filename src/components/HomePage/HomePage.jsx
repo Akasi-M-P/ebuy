@@ -16,10 +16,14 @@ const HomePage = () => {
   const [openProductDetails, setOpenProductDetails] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [cart, setCart] = useState([]);
+  const [wishList, setWishList] = useState([]);
   const [addedProduct, setAddedProduct] = useState(null);
 
   // Calculates Cart length
   const cartLength = cart.length;
+
+  // Calculates Wish list length
+  const wishListLength = wishList.length;
 
   // Opens cart
   function handleOpenCart() {
@@ -72,6 +76,11 @@ const HomePage = () => {
     }
   }
 
+  // Add new product to the Wish list
+  function handleAddProductToWishList(product) {
+    setWishList([...wishList, { ...product }]);
+  }
+
   // Checks products clicked or added
   function handleAddedProduct(product) {
     setAddedProduct((curProduct) =>
@@ -85,6 +94,14 @@ const HomePage = () => {
       (cartProduct) => cartProduct.id !== product
     );
     setCart(updatedCart);
+  }
+
+  // Deletes wish list of product
+  function handleDeleteWishListProduct(product) {
+    const updatedWishList = wishList.filter(
+      (wishListProduct) => wishListProduct.id !== product
+    );
+    setWishList(updatedWishList);
   }
 
   // Handles product quantity changes in cart
@@ -112,6 +129,11 @@ const HomePage = () => {
     setAddedProduct(null);
   }
 
+  // Deletes entire Wish list
+  function handleClearWishList() {
+    setWishList([]);
+  }
+
   return (
     <>
       <div>
@@ -119,6 +141,7 @@ const HomePage = () => {
           onOpenCart={handleOpenCart}
           onOpenWishList={handleOpenWishList}
           cartLength={cartLength}
+          wishListLength={wishListLength}
         />
 
         {openCart && (
@@ -131,7 +154,15 @@ const HomePage = () => {
             onClearAllProducts={handleClearCart}
           />
         )}
-        {openWishList && <WishList onOpenWishList={handleOpenWishList} />}
+        {openWishList && (
+          <WishList
+            onOpenWishList={handleOpenWishList}
+            wishList={wishList}
+            onAddProductToCart={handleAddProductToCart}
+            onDeleteWishListProduct={handleDeleteWishListProduct}
+            onClearWishList={handleClearWishList}
+          />
+        )}
         {selectedProduct && openProductDetails && (
           <Details
             onProductDetails={handleCloseProductDetails}
@@ -147,6 +178,7 @@ const HomePage = () => {
               onAddProductToCart={handleAddProductToCart}
               onAddedProduct={handleAddedProduct}
               addedProduct={addedProduct}
+              onAddToWishList={handleAddProductToWishList}
             />
           </>
         )}
