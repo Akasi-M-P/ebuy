@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./Product.css";
 import { FaHeart } from "react-icons/fa6";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaRegHeart } from "react-icons/fa";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { useState } from "react";
 
@@ -14,6 +14,7 @@ const Product = ({
   onAddToWishList,
 }) => {
   const [markedAdded, setMarkedAdded] = useState(false);
+  const [markedWished, setMarkedWish] = useState(false);
   // handle product click and adding to cart
   function handleAddProduct() {
     onAddProductToCart(product);
@@ -28,6 +29,7 @@ const Product = ({
   // Handle adding product to wishlist
   function handleAddToWishList() {
     onAddToWishList(product);
+    setMarkedWish(true);
   }
 
   const isAdded = addedProduct?.id === product.id;
@@ -37,10 +39,17 @@ const Product = ({
       <div>
         <div className="product border cursor-pointer rounded-md relative h-96  mt-4 md:border md:px-2 md:rounded-lg">
           <div className="mb-14">
-            <FaHeart
-              className="absolute right-5 top-5 text-red-500 cursor-pointer text-2xl md:text-2xl lg:text-4xl"
-              onClick={handleAddToWishList}
-            />
+            {!markedWished ? (
+              <FaRegHeart
+                className="absolute right-5 top-5 text-red-500 cursor-pointer text-2xl md:text-2xl lg:text-4xl"
+                onClick={handleAddToWishList}
+              />
+            ) : (
+              <FaHeart
+                className="absolute right-5 top-5 text-red-500 cursor-pointer text-2xl md:text-2xl lg:text-4xl"
+                onClick={handleAddToWishList}
+              />
+            )}
           </div>
           <div onClick={() => onProductClick(product)}>
             <img

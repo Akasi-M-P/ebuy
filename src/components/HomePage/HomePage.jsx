@@ -19,6 +19,7 @@ const HomePage = () => {
   const [wishList, setWishList] = useState([]);
   const [addedProduct, setAddedProduct] = useState(null);
 
+
   // Calculates Cart length
   const cartLength = cart.length;
 
@@ -70,16 +71,15 @@ const HomePage = () => {
       // If product does not exist in the cart, add it with a quantity of 1
       setCart((prevCart) => {
         const updatedCart = [...prevCart, { ...product, quantity: 1 }];
-        console.log(updatedCart);
         return updatedCart;
       });
     }
 
-    // Delete product from wishlist after adding to the cart with a delay of three seconds
+    // Delete product from wishlist after adding to the cart
     setTimeout(() => {
       const newWishList = wishList.filter((item) => item.id !== product.id);
       setWishList(newWishList);
-    }, 2000);
+    }, 500);
   }
 
   // Add new product to the Wish list
@@ -90,7 +90,6 @@ const HomePage = () => {
     } else {
       return null;
     }
-    
   }
 
   // Checks products clicked or added
@@ -173,6 +172,7 @@ const HomePage = () => {
             onAddProductToCart={handleAddProductToCart}
             onDeleteWishListProduct={handleDeleteWishListProduct}
             onClearWishList={handleClearWishList}
+            addedProduct={addedProduct}
           />
         )}
         {selectedProduct && openProductDetails && (

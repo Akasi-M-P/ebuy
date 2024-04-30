@@ -9,6 +9,7 @@ const WishList = ({
   onAddProductToCart,
   onDeleteWishListProduct,
   onClearWishList,
+  addedProduct,
 }) => {
   return (
     <>
@@ -23,11 +24,15 @@ const WishList = ({
           />
         </div>
         <div>
-          <WishListItem
-            wishList={wishList}
-            onAddProductToCart={onAddProductToCart}
-            onDeleteWishListProduct={onDeleteWishListProduct}
-          />
+          {wishList.map((wishListItem) => (
+            <WishListItem
+              key={wishListItem.id}
+              wishListItem={wishListItem}
+              onAddProductToCart={onAddProductToCart}
+              onDeleteWishListProduct={onDeleteWishListProduct}
+              addedProduct={addedProduct}
+            />
+          ))}
         </div>
 
         <div className="w-full flex justify-center m-4 lg:m-8">
