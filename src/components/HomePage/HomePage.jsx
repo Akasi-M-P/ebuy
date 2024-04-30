@@ -179,6 +179,7 @@ const HomePage = () => {
           <Details
             onProductDetails={handleCloseProductDetails}
             product={selectedProduct}
+            onAddProductToCart={handleAddProductToCart}
           />
         )}
         {!openCart && !openWishList && !openProductDetails && (

@@ -12,8 +12,12 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCube, Pagination } from "swiper/modules";
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product, onAddProductToCart }) => {
   const boxAvailable = product.box?.length > 0;
+
+  function addToCart() {
+    onAddProductToCart();
+  }
   return (
     <>
       <div>
@@ -199,7 +203,10 @@ const ProductDetails = ({ product }) => {
           <hr />
         </div>
         <div className="w-full flex justify-center my-5 lg:mt-28 lg:mb-28">
-          <button className="border p-3  w-2/3 rounded-xl bg-orange-600 lg:w-2/4">
+          <button
+            className="border p-3  w-2/3 rounded-xl bg-orange-600 lg:w-2/4"
+            onClick={addToCart}
+          >
             <p className="text-center text-lg text-white font-bold md:text-xl lg:text-2xl">
               Add to Cart
             </p>

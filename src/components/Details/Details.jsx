@@ -5,7 +5,7 @@ import "./Details.css";
 import ProductDetails from "./ProductDetails";
 import { FaWindowClose } from "react-icons/fa";
 
-const Details = ({ onProductDetails, product }) => {
+const Details = ({ onProductDetails, product, onAddProductToCart }) => {
   const detailsRef = useRef(null);
 
   useEffect(() => {
@@ -29,6 +29,7 @@ const Details = ({ onProductDetails, product }) => {
           <ProductDetails
             product={product}
             onProductDetails={onProductDetails}
+            onAddProductToCart={onAddProductToCart}
           />
         </div>
       </div>
