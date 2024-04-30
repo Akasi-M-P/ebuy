@@ -74,6 +74,12 @@ const HomePage = () => {
         return updatedCart;
       });
     }
+
+    // Delete product from wishlist after adding to the cart with a delay of three seconds
+    setTimeout(() => {
+      const newWishList = wishList.filter((item) => item.id !== product.id);
+      setWishList(newWishList);
+    }, 2000);
   }
 
   // Add new product to the Wish list
