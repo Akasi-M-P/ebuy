@@ -15,7 +15,7 @@ const WishList = ({
       <div className="h-full" data-aos="flip-up">
         <div className="w-full flex justify-between p-5 md:w-10/12 md:mx-auto">
           <p className="font-bold text-orange-500 text-sm md:text-lg lg:text-2xl">
-            Your wish list Items
+            Your wish list
           </p>
           <FaWindowClose
             className=" text-orange-500 text-lg md:text-2xl lg:text-4xl cursor-pointer"

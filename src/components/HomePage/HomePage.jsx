@@ -78,7 +78,13 @@ const HomePage = () => {
 
   // Add new product to the Wish list
   function handleAddProductToWishList(product) {
-    setWishList([...wishList, { ...product }]);
+    const isProductInWishList = wishList.some((item) => item.id === product.id);
+    if (!isProductInWishList) {
+      setWishList([...wishList, { ...product }]);
+    } else {
+      return null;
+    }
+    
   }
 
   // Checks products clicked or added
