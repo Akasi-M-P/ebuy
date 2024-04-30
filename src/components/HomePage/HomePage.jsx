@@ -180,6 +180,7 @@ const HomePage = () => {
             onProductDetails={handleCloseProductDetails}
             product={selectedProduct}
             onAddProductToCart={handleAddProductToCart}
+            onAddToWishList={handleAddProductToWishList}
           />
         )}
         {!openCart && !openWishList && !openProductDetails && (

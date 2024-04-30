@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import { FaHeart } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,8 +15,9 @@ import "swiper/css/pagination";
 import { EffectCube, Pagination } from "swiper/modules";
 import { useState } from "react";
 
-const ProductDetails = ({ product, onAddProductToCart }) => {
+const ProductDetails = ({ product, onAddProductToCart, onAddToWishList }) => {
   const [marked, setMarked] = useState(false);
+  const [markWish, setMarkWish] = useState(false);
   const boxAvailable = product.box?.length > 0;
 
   function addToCart() {
@@ -25,6 +27,11 @@ const ProductDetails = ({ product, onAddProductToCart }) => {
     setTimeout(() => {
       setMarked(false);
     }, 2000);
+  }
+
+  function addToWishList() {
+    onAddToWishList(product);
+    setMarkWish(true);
   }
   return (
     <>
@@ -88,7 +95,17 @@ const ProductDetails = ({ product, onAddProductToCart }) => {
             </div>
             <div className="flex flex-col gap-10">
               <div className="">
-                <FaHeart className=" text-red-500 cursor-pointer text-2xl md:text-3xl lg:text-4xl" />
+                {markWish ? (
+                  <FaHeart
+                    className=" text-red-500 cursor-pointer text-2xl md:text-3xl lg:text-4xl"
+                    onClick={addToWishList}
+                  />
+                ) : (
+                  <FaRegHeart
+                    className=" text-red-500 cursor-pointer text-2xl md:text-3xl lg:text-4xl"
+                    onClick={addToWishList}
+                  />
+                )}
               </div>
               <div className="flex gap-2 md:text-lg lg:text-2xl">
                 <p>

@@ -7,7 +7,6 @@ const WishListItem = ({
   wishListItem,
   onAddProductToCart,
   onDeleteWishListProduct,
-  addedProduct,
 }) => {
   const [markAddedToCartFromWish, setMarkAddedToCartFromWish] = useState(false);
 
