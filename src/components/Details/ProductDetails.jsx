@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { FaHeart } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,12 +12,19 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCube, Pagination } from "swiper/modules";
+import { useState } from "react";
 
 const ProductDetails = ({ product, onAddProductToCart }) => {
+  const [marked, setMarked] = useState(false);
   const boxAvailable = product.box?.length > 0;
 
   function addToCart() {
     onAddProductToCart();
+    setMarked(true);
+
+    setTimeout(() => {
+      setMarked(false);
+    }, 2000);
   }
   return (
     <>
@@ -208,7 +216,7 @@ const ProductDetails = ({ product, onAddProductToCart }) => {
             onClick={addToCart}
           >
             <p className="text-center text-lg text-white font-bold md:text-xl lg:text-2xl">
-              Add to Cart
+              {marked ? "Product Added" : "Add to Cart"}
             </p>
           </button>
         </div>
