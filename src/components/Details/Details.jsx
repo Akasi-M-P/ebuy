@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useEffect, useRef } from "react";
 import "./Details.css";
 import ProductDetails from "./ProductDetails";
 import { FaWindowClose } from "react-icons/fa";
+
 
 const Details = ({
   onProductDetails,
@@ -11,19 +11,12 @@ const Details = ({
   onAddProductToCart,
   onAddToWishList,
 }) => {
-  // const detailsRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (detailsRef.current) {
-  //     detailsRef.current.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "start",
-  //     });
-  //   }
-  // }, []);
+  
+
   return (
     <>
-      <div>
+      <div >
         <div className="h-full mb-10 block">
           <div className="flex flex-row-reverse px-8 py-4">
             <FaWindowClose
@@ -31,6 +24,8 @@ const Details = ({
               onClick={onProductDetails}
             />
           </div>
+        </div>
+        <div >
           <ProductDetails
             product={product}
             onProductDetails={onProductDetails}
