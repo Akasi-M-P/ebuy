@@ -3,7 +3,7 @@ import "./Product.css";
 import { FaHeart } from "react-icons/fa6";
 import { FaCartPlus, FaRegHeart } from "react-icons/fa";
 import { BsFillCartCheckFill } from "react-icons/bs";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
 const Product = ({
   product,
@@ -34,21 +34,10 @@ const Product = ({
 
   const isAdded = addedProduct?.id === product.id;
 
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
-
   return (
     <>
       <div>
-        <div
-          className="product border cursor-pointer rounded-md relative h-80  mt-4 md:border md:px-2 md:rounded-lg"
-          ref={scrollRef}
-        >
+        <div className="product border cursor-pointer rounded-md relative h-80  mt-4 md:border md:px-2 md:rounded-lg">
           <div className="mb-16">
             {!markedWished ? (
               <FaRegHeart
