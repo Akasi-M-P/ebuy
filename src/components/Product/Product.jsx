@@ -37,8 +37,8 @@ const Product = ({
   return (
     <>
       <div>
-        <div className="product border cursor-pointer rounded-md relative h-96  mt-4 md:border md:px-2 md:rounded-lg">
-          <div className="mb-14">
+        <div className="product border cursor-pointer rounded-md relative h-80  mt-4 md:border md:px-2 md:rounded-lg">
+          <div className="mb-16">
             {!markedWished ? (
               <FaRegHeart
                 className="absolute right-5 top-5 text-red-500 cursor-pointer text-2xl md:text-2xl lg:text-4xl"
@@ -51,11 +51,12 @@ const Product = ({
               />
             )}
           </div>
-          <div onClick={() => onProductClick(product)}>
+          <div>
             <img
               src={product.image}
               alt={product.name}
-              className="h-64 object-contain mt-6"
+              className="h-40 object-contain mt-6"
+              onClick={() => onProductClick(product)}
             />
           </div>
           <div className="flex justify-between items-center px-2">

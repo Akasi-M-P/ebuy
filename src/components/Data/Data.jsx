@@ -49,7 +49,7 @@ export const products = [
   },
   {
     id: 4,
-    name: "Gaming Headphone",
+    name: "Headphone",
     image: "/assets/gamingheadphone.png",
     price: 1799,
     description:
@@ -113,7 +113,7 @@ export const products = [
   },
   {
     id: 8,
-    name: "Gaming Headphone",
+    name: "Headphone",
     image: "/assets/gamingheadphone.png",
     price: 1799,
     description:
@@ -177,7 +177,7 @@ export const products = [
   },
   {
     id: 12,
-    name: "Gaming Headphone",
+    name: "Headphone",
     image: "/assets/gamingheadphone.png",
     price: 1799,
     description:
@@ -241,7 +241,7 @@ export const products = [
   },
   {
     id: 16,
-    name: "Gaming Headphone",
+    name: "Headphone",
     image: "/assets/gamingheadphone.png",
     price: 1799,
     description:
@@ -305,7 +305,7 @@ export const products = [
   },
   {
     id: 20,
-    name: "Gaming Headphone",
+    name: "Headphone",
     image: "/assets/gamingheadphone.png",
     price: 1799,
     description:

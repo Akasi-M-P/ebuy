@@ -11,12 +11,16 @@ const WishList = ({
   onClearWishList,
   addedProduct,
 }) => {
+
+  const wishListIsGreaterThanZero = wishList.length > 0;
+  const emptyWishList = wishList.length === 0;
+  const wishListContainerClasses = emptyWishList ? "h-screen" : "h-auto";
   return (
     <>
-      <div className="h-full" data-aos="flip-up">
+      <div className={`${wishListContainerClasses}`} data-aos="flip-up">
         <div className="w-full flex justify-between p-5 md:w-10/12 md:mx-auto">
           <p className="font-bold text-orange-500 text-sm md:text-lg lg:text-2xl">
-            Your wish list
+            {emptyWishList ? "Your wish list is empty" : "Your wish list"}
           </p>
           <FaWindowClose
             className=" text-orange-500 text-lg md:text-2xl lg:text-4xl cursor-pointer"
@@ -36,12 +40,14 @@ const WishList = ({
         </div>
 
         <div className="w-full flex justify-center m-4 lg:m-8">
-          <button
-            className="border-2 border-orange-200 p-2 rounded-md text-sm text-red-400 md:text-lg"
-            onClick={onClearWishList}
-          >
-            clear wish list
-          </button>
+          {wishListIsGreaterThanZero && (
+            <button
+              className="border-2 border-orange-200 p-2 rounded-md text-sm text-red-400 md:text-lg"
+              onClick={onClearWishList}
+            >
+              clear wish list
+            </button>
+          )}
         </div>
       </div>
     </>
