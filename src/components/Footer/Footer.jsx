@@ -5,8 +5,8 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <div className="footer bg-orange-500 text-white text-lg md:text-xl h-80">
-        <div className="footer bg-orange-500 text-white text-lg md:text-xl lg:text-2xl h-64 flex items-center">
+      <div className="footer bg-orange-500 text-white text-lg md:text-xl h-96">
+        <div className="footer bg-orange-500 text-white text-lg md:text-xl lg:text-2xl h-80 flex items-center">
           <div className="mx-auto flex flex-col gap-4">
             <div>
               <a href="">About</a>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="w-10/12 mx-auto p-1" />
-        <div className="copyrights flex flex-col items-center text-lg  md:text-xl">
+        <div className="copyrights bg-orange-500 flex flex-col items-center text-lg  md:text-xl">
           <p>eBuy</p>
           <p>CopyRights @ 2024, ebuy.com</p>
         </div>

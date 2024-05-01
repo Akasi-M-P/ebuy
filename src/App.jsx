@@ -2,6 +2,7 @@ import HomePage from "./components/HomePage/HomePage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -12,6 +13,9 @@ function App() {
       <main>
         <div>
           <HomePage />
+        </div>
+        <div>
+          <Footer />
         </div>
       </main>
     </>

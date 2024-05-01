@@ -14,7 +14,9 @@ const WishList = ({
 
   const wishListIsGreaterThanZero = wishList.length > 0;
   const emptyWishList = wishList.length === 0;
-  const wishListContainerClasses = emptyWishList ? "h-screen" : "h-auto";
+  const wishListContainerClasses = emptyWishList
+    ? "min-h-screen"
+    : "min-h-cart";
   return (
     <>
       <div className={`${wishListContainerClasses}`} data-aos="flip-up">

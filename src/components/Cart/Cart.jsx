@@ -13,7 +13,7 @@ const Cart = ({
 }) => {
   const subTotalIsGreaterThanZero = subtotalPrice() > 0;
   const emptyCart = cartProducts.length === 0;
-  const cartContainerClasses = emptyCart ? "h-screen" : "h-auto";
+  const cartContainerClasses = emptyCart ? "min-h-screen" : "min-h-cart";
   return (
     <>
       <div className={`${cartContainerClasses} md:h-auto`} data-aos="flip-up">
