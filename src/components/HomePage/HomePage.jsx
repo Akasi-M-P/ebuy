@@ -49,7 +49,6 @@ const HomePage = () => {
   // Closes product details
   function handleCloseProductDetails() {
     setOpenProductDetails((closeProduct) => !closeProduct);
-    console.log("close");
   }
 
   // Adds a new product to the Cart list

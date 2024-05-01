@@ -11,19 +11,19 @@ const Details = ({
   onAddProductToCart,
   onAddToWishList,
 }) => {
-  const detailsRef = useRef(null);
+  // const detailsRef = useRef(null);
 
-  useEffect(() => {
-    if (detailsRef.current) {
-      detailsRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (detailsRef.current) {
+  //     detailsRef.current.scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "start",
+  //     });
+  //   }
+  // }, []);
   return (
     <>
-      <div ref={detailsRef}>
+      <div>
         <div className="h-full mb-10 block">
           <div className="flex flex-row-reverse px-8 py-4">
             <FaWindowClose
