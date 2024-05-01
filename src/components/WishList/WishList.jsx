@@ -19,7 +19,7 @@ const WishList = ({
     : "min-h-cart";
   return (
     <>
-      <div className={`${wishListContainerClasses}`} data-aos="flip-up">
+      <div className={`${wishListContainerClasses}`}>
         <div className="w-full flex justify-between p-5 md:w-10/12 md:mx-auto">
           <p className="font-bold text-orange-500 text-sm md:text-lg lg:text-2xl">
             {emptyWishList ? "Your wish list is empty" : "Your wish list"}

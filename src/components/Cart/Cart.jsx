@@ -16,7 +16,7 @@ const Cart = ({
   const cartContainerClasses = emptyCart ? "min-h-screen" : "min-h-cart";
   return (
     <>
-      <div className={`${cartContainerClasses} md:h-auto`} data-aos="flip-up">
+      <div className={`${cartContainerClasses} md:h-auto`}>
         <div className="w-full flex justify-between p-5 md:w-10/12 md:mx-auto">
           <p className="font-bold text-orange-500 text-sm md:text-lg lg:text-2xl">
             {emptyCart ? "Your cart is empty" : "Your Cart Items"}
