@@ -1,0 +1,16 @@
+import AnnouncementBar from '@/components/storefront/AnnouncementBar'
+import Navbar from '@/components/storefront/Navbar'
+import CartDrawer from '@/components/storefront/CartDrawer'
+import Footer from '@/components/storefront/Footer'
+
+export default function StorefrontLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <AnnouncementBar />
+      <Navbar />
+      <CartDrawer />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+  )
+}

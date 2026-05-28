@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(npx prisma *)",
+      "Bash(Remove-Item -Recurse -Force .next -ErrorAction SilentlyContinue)"
+    ],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "d:\\Projects\\ebuy-main\\src\\pages"
+    ]
+  }
+}
