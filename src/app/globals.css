@@ -53,27 +53,36 @@ h1, h2, h3, h4, h5, h6 {
 /* ─── Utilities ───────────────────────────────────────────────────────────── */
 @layer utilities {
   .btn-gold {
-    @apply bg-ebuy-gold text-ebuy-bg font-semibold tracking-wide
-           px-6 py-3 rounded transition-all duration-150 cursor-pointer;
+    background-color: rgb(var(--brand));
+    color: #0A0A0A;
+    @apply font-semibold tracking-wide px-6 py-3 rounded transition-all duration-150 cursor-pointer;
   }
-  .btn-gold:hover { @apply bg-ebuy-gold-light shadow-gold; }
+  .btn-gold:hover {
+    background-color: rgb(var(--brand-light));
+    box-shadow: 0 0 20px rgb(var(--brand) / 0.35);
+  }
 
   .btn-outline {
-    @apply border border-ebuy-border text-ebuy-text font-medium
-           px-6 py-3 rounded transition-all duration-150 cursor-pointer;
+    @apply border border-ebuy-border text-ebuy-text font-medium px-6 py-3 rounded transition-all duration-150 cursor-pointer;
   }
-  .btn-outline:hover { @apply border-ebuy-gold text-ebuy-gold; }
+  .btn-outline:hover {
+    border-color: rgb(var(--brand));
+    color: rgb(var(--brand));
+  }
 
-  .badge-new  { @apply text-[10px] font-bold tracking-widest uppercase bg-ebuy-gold text-ebuy-bg px-2 py-0.5 rounded-sm; }
+  .badge-new {
+    background-color: rgb(var(--brand));
+    color: #0A0A0A;
+    @apply text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-sm;
+  }
   .badge-sale { @apply text-[10px] font-bold tracking-widest uppercase bg-ebuy-error text-white px-2 py-0.5 rounded-sm; }
 
   .divider { @apply border-t border-ebuy-border; }
 
   .input-dark {
-    @apply w-full bg-ebuy-surface-2 border border-ebuy-border text-ebuy-text
-           placeholder-ebuy-muted rounded px-4 py-3 text-sm
-           focus:outline-none focus:border-ebuy-gold transition-colors;
+    @apply w-full bg-ebuy-surface-2 border border-ebuy-border text-ebuy-text placeholder-ebuy-muted rounded px-4 py-3 text-sm focus:outline-none transition-colors;
   }
+  .input-dark:focus { border-color: rgb(var(--brand)); }
 
   .text-balance { text-wrap: balance; }
 
@@ -85,12 +94,8 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
   }
 
-  .card-hover {
-    @apply transition-all duration-300 ease-out;
-  }
-  .card-hover:hover {
-    @apply shadow-card-hover -translate-y-0.5;
-  }
+  .card-hover { @apply transition-all duration-300 ease-out; }
+  .card-hover:hover { @apply shadow-card-hover -translate-y-0.5; }
 
   .skeleton {
     background: linear-gradient(90deg, #1A1A1A 25%, #242424 50%, #1A1A1A 75%);
