@@ -57,7 +57,7 @@ export default function AdminCustomers() {
 
       <div className="relative mb-5 max-w-xs">
         <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-ebuy-muted pointer-events-none" />
-        <input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search by name or email…" className="input-dark pl-9 py-2 text-sm w-full" />
+        <input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search by name or email…" className="input-dark !pl-9 py-2 text-sm w-full" />
       </div>
 
       <div className="bg-ebuy-surface border border-ebuy-border rounded overflow-hidden">

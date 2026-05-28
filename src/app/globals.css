@@ -50,8 +50,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
 }
 
-/* ─── Components ──────────────────────────────────────────────────────────── */
-@layer components {
+/* ─── Utilities ───────────────────────────────────────────────────────────── */
+@layer utilities {
   .btn-gold {
     @apply bg-ebuy-gold text-ebuy-bg font-semibold tracking-wide
            px-6 py-3 rounded transition-all duration-150 cursor-pointer;
@@ -74,10 +74,7 @@ h1, h2, h3, h4, h5, h6 {
            placeholder-ebuy-muted rounded px-4 py-3 text-sm
            focus:outline-none focus:border-ebuy-gold transition-colors;
   }
-}
 
-/* ─── Utilities ───────────────────────────────────────────────────────────── */
-@layer utilities {
   .text-balance { text-wrap: balance; }
 
   .gold-shimmer {

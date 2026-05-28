@@ -142,7 +142,7 @@ export default function AdminProducts() {
       <div className="flex flex-wrap gap-3 mb-5">
         <div className="relative">
           <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-ebuy-muted pointer-events-none" />
-          <input type="search" value={search} onChange={e => { setSearch(e.target.value); setPage(1) }} placeholder="Search products…" className="input-dark pl-9 py-2 text-sm max-w-[220px]" />
+          <input type="search" value={search} onChange={e => { setSearch(e.target.value); setPage(1) }} placeholder="Search products…" className="input-dark !pl-9 py-2 text-sm max-w-[220px]" />
         </div>
         {(['all', 'active', 'draft', 'archived'] as const).map(s => (
           <button key={s} onClick={() => { setStatusFilter(s); setPage(1) }} className={cn('px-3 py-1.5 border rounded text-xs capitalize transition-colors', statusFilter === s ? 'border-ebuy-gold text-ebuy-gold bg-ebuy-gold/10' : 'border-ebuy-border text-ebuy-muted hover:border-ebuy-muted')}>{s}</button>
